@@ -1,5 +1,11 @@
 const express = require('express');
 
+const routes = require('./routes');
+const { authorize } = require('./auth');
+
 const app = express();
 
-return app;
+app
+  .use('/api', authorize, routes);
+
+module.exports = app;
