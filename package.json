@@ -1,0 +1,35 @@
+{
+  "name": "jibble",
+  "version": "1.0.0",
+  "description": "API server providing a set of CRUD endpoints as well as an aggregation one",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vladislao/jibble.git"
+  },
+  "author": "vladislao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Vladislao/jibble/issues"
+  },
+  "homepage": "https://github.com/Vladislao/jibble#readme",
+  "dependencies": {
+    "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.2",
+    "casual": "^1.5.17",
+    "chai": "^4.1.2",
+    "eslint": "^4.11.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.5.1",
+    "mocha": "^4.0.1",
+    "nyc": "^11.3.0",
+    "supertest": "^3.0.0"
+  }
+}
