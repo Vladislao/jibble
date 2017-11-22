@@ -4,7 +4,7 @@
   "description": "API server providing a set of CRUD endpoints as well as an aggregation one",
   "main": "index.js",
   "scripts": {
-    "test": "nyc mocha tests/index.js tests/**/**/*.test.js --exit"
+    "test": "nyc mocha tests/**/**/*.test.js --exit"
   },
   "repository": {
     "type": "git",
@@ -35,7 +35,6 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.5.1",
     "mocha": "^4.0.1",
-    "nyc": "^11.3.0",
-    "supertest": "^3.0.0"
+    "nyc": "^11.3.0"
   }
 }

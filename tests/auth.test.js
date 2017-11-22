@@ -13,4 +13,10 @@ describe('authorize', () => {
       .set('Authorization', 'Bearer falsy');
     expect(response).to.have.status(501);
   });
+  it('should return 404 when Authorization header is valid', async () => {
+    const response = await request(app)
+      .get('/api/')
+      .set('Authorization', 'Bearer af24353tdsfw');
+    expect(response).to.have.status(404);
+  });
 });
