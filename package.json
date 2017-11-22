@@ -4,19 +4,24 @@
   "description": "API server providing a set of CRUD endpoints as well as an aggregation one",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nyc mocha tests/**/**/*.test.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Vladislao/jibble.git"
   },
-  "author": "vladislao",
+  "engines": {
+    "node": ">= 6.0.0"
+  },
+  "author": "vladislao <vladislaosan@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Vladislao/jibble/issues"
   },
   "homepage": "https://github.com/Vladislao/jibble#readme",
   "dependencies": {
+    "config3": "^1.0.3",
+    "express": "^4.16.2",
     "request": "^2.83.0"
   },
   "devDependencies": {
