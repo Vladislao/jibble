@@ -2,7 +2,7 @@ const express = require('express');
 
 const routes = require('./routes');
 const { authorize } = require('./auth');
-// const cache = require('./cache');
+const cache = require('./cache');
 
 /*
  * Server configuration
@@ -17,7 +17,9 @@ const app = express();
 // ));
 
 app
-  .use('/api', authorize, routes)
+  .use(authorize)
+  .use(cache())
+  .use('/api', routes)
   .use((err, req, res, next) => {
     // log error
     console.error(err);
