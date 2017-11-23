@@ -16,6 +16,7 @@ router
       const aggregation = [];
       for (let i = 0; i < 30; i += 1) {
         aggregation.push({
+          // use mod in case of small source size
           post: posts[i % posts.length],
           user: users[i % users.length],
           album: albums[i % albums.length],

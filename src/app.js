@@ -1,7 +1,11 @@
+/*
+ * Server configuration
+*/
 const express = require('express');
 
 const routes = require('./routes');
 const { authorize } = require('./auth');
+
 
 const app = express();
 

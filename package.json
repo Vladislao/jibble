@@ -4,6 +4,7 @@
   "description": "API server providing a set of CRUD endpoints as well as an aggregation one",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "nyc mocha tests/**/**/*.test.js --exit"
   },
   "repository": {
