@@ -22,7 +22,8 @@
   "dependencies": {
     "config3": "^1.0.3",
     "express": "^4.16.2",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "request-promise-native": "^1.0.5"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.2",

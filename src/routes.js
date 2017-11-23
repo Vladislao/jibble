@@ -1,14 +1,15 @@
 const { Router } = require('express');
 
 const posts = require('./controllers/posts');
-const albums = require('./controllers/albums');
-const users = require('./controllers/users');
+const collection = require('./controllers/collection');
+// const albums = require('./controllers/albums');
+// const users = require('./controllers/users');
 
 const router = new Router();
 
 router
   // .use('/albums', albums)
-  // .use('/users', users)
+  .use('/collection', collection)
   .use('/posts', posts);
 
 module.exports = router;

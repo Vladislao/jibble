@@ -27,7 +27,7 @@ describe('/posts', function posts() {
     const response = await request(app)
       .post('/api/posts')
       .send({
-        userId: casual.integer(0, 10),
+        userId: casual.integer(1, 10),
         title: casual.title,
         body: casual.text,
       })
@@ -38,11 +38,11 @@ describe('/posts', function posts() {
   });
 
   it('PUT should return 200 and updated post', async () => {
-    const id = casual.integer(0, 10);
+    const id = casual.integer(1, 10);
     const response = await request(app)
       .put(`/api/posts/${id}`)
       .send({
-        userId: casual.integer(0, 10),
+        userId: casual.integer(1, 10),
         title: casual.title,
         body: casual.text,
       })
@@ -53,7 +53,7 @@ describe('/posts', function posts() {
   });
 
   it('PATCH should return 200 and updated post', async () => {
-    const id = casual.integer(0, 10);
+    const id = casual.integer(1, 10);
     const response = await request(app)
       .patch(`/api/posts/${id}`)
       .send({
@@ -66,7 +66,7 @@ describe('/posts', function posts() {
   });
 
   it('DELETE should return 200', async () => {
-    const id = casual.integer(0, 10);
+    const id = casual.integer(1, 10);
     const response = await request(app)
       .delete(`/api/posts/${id}`)
       .set('Authorization', 'Bearer af24353tdsfw');
