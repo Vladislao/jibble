@@ -1,7 +1,9 @@
 const chai = require('chai');
-const chaiHttp = require('chai-http');
+const http = require('chai-http');
+const spies = require('chai-spies');
 
-chai.use(chaiHttp);
+chai.use(spies);
+chai.use(http);
 const { expect } = chai;
 
 it('tests should work', () => {

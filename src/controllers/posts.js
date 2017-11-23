@@ -1,21 +1,24 @@
 const { Router } = require('express');
-const request = require('request');
+const request = require('request-promise-native');
 const config = require('config3');
 
 const router = new Router();
 
 router
-  .get('/', (req, res, next) => {
+  .get('/', async (req, res, next) => {
     try {
-      return req.pipe(request(`${config.SOURCE}/posts`)).pipe(res);
+      const result = await request.get({ url: `${config.SOURCE}/posts`, json: true });
+      return res.send(result);
     } catch (e) {
       return next(e);
     }
   })
 
-  .get('/:id', (req, res, next) => {
+  .get('/:id', async (req, res, next) => {
     try {
-      return req.pipe(request(`${config.SOURCE}/posts/${req.params.id}`)).pipe(res);
+      const result = await request.get({ url: `${config.SOURCE}/posts/${req.params.id}`, json: true });
+
+      return res.send(result);
     } catch (e) {
       return next(e);
     }
