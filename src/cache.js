@@ -2,10 +2,10 @@ const crypto = require('crypto');
 
 /*
  * Provision for caching
- * Requires load and save functions to be provided. Returns cache middleware.
+ * Requires functions `load` and `save` to be provided. Returns middleware.
  *
- * Load function should receive key and return data if found and undefined if not
- * Save function should receive key and body
+ * Function `load` should receive `key` and return `data` if found and `undefined` if not
+ * Function `save` should receive `key` and `body`
 */
 module.exports = (load, save) => {
   if (load === undefined) return (req, res, next) => { next(); };

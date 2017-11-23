@@ -3,7 +3,7 @@ const casual = require('casual');
 const app = require('../../src/app');
 
 describe('/posts', function posts() {
-  this.timeout(5000);
+  this.timeout(10000);
 
   it('GET should return 200 and list of posts', async () => {
     const response = await request(app)
