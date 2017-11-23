@@ -12,7 +12,7 @@
     "url": "git+https://github.com/Vladislao/jibble.git"
   },
   "engines": {
-    "node": ">= 6.0.0"
+    "node": ">= 7.7.0"
   },
   "author": "vladislao <vladislaosan@gmail.com>",
   "license": "MIT",
